@@ -8,8 +8,7 @@ class DownloadsState with _$DownloadsState {
     required Option<Either<MainFailure, List<Downloads>>>
         downloadsFailureOrSuccessOption,
   }) = _DownloadsState;
-
-  factory DownloadsState.inital() {
+  factory DownloadsState.initial() {
     return const DownloadsState(
       isLoading: false,
       downloadsFailureOrSuccessOption: None(),

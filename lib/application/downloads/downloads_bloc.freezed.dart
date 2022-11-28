@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$DownloadsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getDownloadsImages,
+    required TResult Function() getDownloadsImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getDownloadsImages,
+    TResult? Function()? getDownloadsImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getDownloadsImages,
+    TResult Function()? getDownloadsImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDownloadsImages value) getDownloadsImages,
+    required TResult Function(_GetDownloadsImage value) getDownloadsImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDownloadsImages value)? getDownloadsImages,
+    TResult? Function(_GetDownloadsImage value)? getDownloadsImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDownloadsImages value)? getDownloadsImages,
+    TResult Function(_GetDownloadsImage value)? getDownloadsImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,35 +69,35 @@ class _$DownloadsEventCopyWithImpl<$Res, $Val extends DownloadsEvent>
 }
 
 /// @nodoc
-abstract class _$$_GetDownloadsImagesCopyWith<$Res> {
-  factory _$$_GetDownloadsImagesCopyWith(_$_GetDownloadsImages value,
-          $Res Function(_$_GetDownloadsImages) then) =
-      __$$_GetDownloadsImagesCopyWithImpl<$Res>;
+abstract class _$$_GetDownloadsImageCopyWith<$Res> {
+  factory _$$_GetDownloadsImageCopyWith(_$_GetDownloadsImage value,
+          $Res Function(_$_GetDownloadsImage) then) =
+      __$$_GetDownloadsImageCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetDownloadsImagesCopyWithImpl<$Res>
-    extends _$DownloadsEventCopyWithImpl<$Res, _$_GetDownloadsImages>
-    implements _$$_GetDownloadsImagesCopyWith<$Res> {
-  __$$_GetDownloadsImagesCopyWithImpl(
-      _$_GetDownloadsImages _value, $Res Function(_$_GetDownloadsImages) _then)
+class __$$_GetDownloadsImageCopyWithImpl<$Res>
+    extends _$DownloadsEventCopyWithImpl<$Res, _$_GetDownloadsImage>
+    implements _$$_GetDownloadsImageCopyWith<$Res> {
+  __$$_GetDownloadsImageCopyWithImpl(
+      _$_GetDownloadsImage _value, $Res Function(_$_GetDownloadsImage) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_GetDownloadsImages implements _GetDownloadsImages {
-  const _$_GetDownloadsImages();
+class _$_GetDownloadsImage implements _GetDownloadsImage {
+  const _$_GetDownloadsImage();
 
   @override
   String toString() {
-    return 'DownloadsEvent.getDownloadsImages()';
+    return 'DownloadsEvent.getDownloadsImage()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetDownloadsImages);
+        (other.runtimeType == runtimeType && other is _$_GetDownloadsImage);
   }
 
   @override
@@ -106,27 +106,27 @@ class _$_GetDownloadsImages implements _GetDownloadsImages {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getDownloadsImages,
+    required TResult Function() getDownloadsImage,
   }) {
-    return getDownloadsImages();
+    return getDownloadsImage();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getDownloadsImages,
+    TResult? Function()? getDownloadsImage,
   }) {
-    return getDownloadsImages?.call();
+    return getDownloadsImage?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getDownloadsImages,
+    TResult Function()? getDownloadsImage,
     required TResult orElse(),
   }) {
-    if (getDownloadsImages != null) {
-      return getDownloadsImages();
+    if (getDownloadsImage != null) {
+      return getDownloadsImage();
     }
     return orElse();
   }
@@ -134,34 +134,34 @@ class _$_GetDownloadsImages implements _GetDownloadsImages {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDownloadsImages value) getDownloadsImages,
+    required TResult Function(_GetDownloadsImage value) getDownloadsImage,
   }) {
-    return getDownloadsImages(this);
+    return getDownloadsImage(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDownloadsImages value)? getDownloadsImages,
+    TResult? Function(_GetDownloadsImage value)? getDownloadsImage,
   }) {
-    return getDownloadsImages?.call(this);
+    return getDownloadsImage?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDownloadsImages value)? getDownloadsImages,
+    TResult Function(_GetDownloadsImage value)? getDownloadsImage,
     required TResult orElse(),
   }) {
-    if (getDownloadsImages != null) {
-      return getDownloadsImages(this);
+    if (getDownloadsImage != null) {
+      return getDownloadsImage(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetDownloadsImages implements DownloadsEvent {
-  const factory _GetDownloadsImages() = _$_GetDownloadsImages;
+abstract class _GetDownloadsImage implements DownloadsEvent {
+  const factory _GetDownloadsImage() = _$_GetDownloadsImage;
 }
 
 /// @nodoc

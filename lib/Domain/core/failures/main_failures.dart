@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'main_failures.freezed.dart';
 

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:netflix/application/search/search_bloc.dart';
 
 import 'package:netflix/core/constands.dart';
+import 'package:netflix/core/strings.dart';
 import 'package:netflix/presentation/search/widgets/titles.dart';
-
-const imageurl =
-    "https://www.themoviedb.org/t/p/w220_and_h330_face/tegBpjM5ODoYoM1NjaiHVLEA0QM.jpg";
 
 class SearchResultWidgets extends StatelessWidget {
   const SearchResultWidgets({Key? key}) : super(key: key);
@@ -16,19 +16,25 @@ class SearchResultWidgets extends StatelessWidget {
       children: [
         const SearchTitle(title: 'Movie & TV'),
         khigth,
-        Expanded(
-            child: GridView.count(
-          shrinkWrap: true,
-          crossAxisCount: 3,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 8,
-          childAspectRatio: 1 / 1.4,
-          children: List.generate(
-            20,
-            (index) {
-              return const MainCard();
-            },
-          ),
+        Expanded(child: BlocBuilder<SearchBloc, SearchState>(
+          builder: (context, state) {
+            return GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 3,
+              mainAxisSpacing: 8,
+              crossAxisSpacing: 8,
+              childAspectRatio: 1 / 1.4,
+              children: List.generate(
+                20,
+                (index) {
+                  final movie = state.searchResultList[index];
+                  return MainCard(
+                    imageUrl: '$imageAppendurl${movie.posterPath}',
+                  );
+                },
+              ),
+            );
+          },
         )),
       ],
     );
@@ -36,14 +42,15 @@ class SearchResultWidgets extends StatelessWidget {
 }
 
 class MainCard extends StatelessWidget {
-  const MainCard({Key? key}) : super(key: key);
+  final String imageUrl;
+  const MainCard({Key? key, required this.imageUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: const DecorationImage(
-            image: NetworkImage(imageurl), fit: BoxFit.cover),
+        image:
+            DecorationImage(image: NetworkImage(imageUrl), fit: BoxFit.cover),
         borderRadius: BorderRadius.circular(7),
       ),
     );

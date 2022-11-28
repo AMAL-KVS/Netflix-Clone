@@ -92,18 +92,12 @@ class __$$_ClientFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ClientFailure with DiagnosticableTreeMixin implements _ClientFailure {
+class _$_ClientFailure implements _ClientFailure {
   const _$_ClientFailure();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'MainFailure.clientFailure()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'MainFailure.clientFailure'));
   }
 
   @override
@@ -200,18 +194,12 @@ class __$$_ServerFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ServerFailure with DiagnosticableTreeMixin implements _ServerFailure {
+class _$_ServerFailure implements _ServerFailure {
   const _$_ServerFailure();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'MainFailure.serverFailure()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'MainFailure.serverFailure'));
   }
 
   @override

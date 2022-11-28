@@ -8,10 +8,13 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../../../application/downloads/downloads_bloc.dart' as _i5;
+import '../../../application/downloads/downloads_bloc.dart' as _i7;
+import '../../../application/search/search_bloc.dart' as _i8;
 import '../../../Infrastructure/downloads/download_repository.dart' as _i4;
-import '../../downloads/i_download_repo.dart'
-    as _i3; // ignore_for_file: unnecessary_lambdas
+import '../../../Infrastructure/search/search_impl.dart' as _i6;
+import '../../downloads/i_download_repo.dart' as _i3;
+import '../../search/search_Service.dart'
+    as _i5; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -25,8 +28,13 @@ _i1.GetIt $initGetIt(
     environment,
     environmentFilter,
   );
-  gh.lazySingleton<_i3.IDownloadRepo>(() => _i4.DownloadRepository());
-  gh.factory<_i5.DownloadsBloc>(
-      () => _i5.DownloadsBloc(get<_i3.IDownloadRepo>()));
+  gh.lazySingleton<_i3.IDownloadsRep>(() => _i4.DownloadsRepositery());
+  gh.lazySingleton<_i5.SearchService>(() => _i6.SearchImpl());
+  gh.factory<_i7.DownloadsBloc>(
+      () => _i7.DownloadsBloc(get<_i3.IDownloadsRep>()));
+  gh.factory<_i8.SearchBloc>(() => _i8.SearchBloc(
+        get<_i5.SearchService>(),
+        get<_i3.IDownloadsRep>(),
+      ));
   return get;
 }
