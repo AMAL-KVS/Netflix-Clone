@@ -4,4 +4,6 @@ import 'package:netflix/core/strings.dart';
 class ApiEndPoints {
   static const downloads = "$kBaseUral/trending/all/day?api_key=$apikey";
   static const search = " $kBaseUral/search/movie?api_key=$apikey";
+  static const search2 =
+      "$kBaseUral/search/movie?api_key=$apikey&language=en-US&query=spiderman&page=1&include_adult=false";
 }

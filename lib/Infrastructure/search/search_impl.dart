@@ -16,7 +16,7 @@ class SearchImpl implements SearchService {
       {required String movieQuery}) async {
     try {
       final response =
-          await Dio(BaseOptions()).get(ApiEndPoints.search, queryParameters: {
+          await Dio(BaseOptions()).get(ApiEndPoints.search2, queryParameters: {
         'query': movieQuery,
       });
       //log(response.data.toString());
@@ -27,6 +27,7 @@ class SearchImpl implements SearchService {
         return const Left(MainFailure.serverFailure());
       }
     } catch (e) {
+      log(e.toString());
       return const Left(MainFailure.clientFailure());
     }
   }

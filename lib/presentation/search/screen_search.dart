@@ -36,6 +36,9 @@ class ScreenSearch extends StatelessWidget {
                 ),
                 style: const TextStyle(color: Colors.white),
                 onChanged: (value) {
+                  if (value.isEmpty) {
+                    return;
+                  }
                   _debounser.run(() {
                     BlocProvider.of<SearchBloc>(context)
                         .add(SearchMovie(movieQuery: value));
