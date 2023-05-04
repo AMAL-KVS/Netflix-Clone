@@ -4,10 +4,8 @@ import '../../widgets/main_titile.dart';
 import 'number_card.dart';
 
 class NumberTileCard extends StatelessWidget {
-  const NumberTileCard({
-    Key? key,
-  }) : super(key: key);
-
+  const NumberTileCard({Key? key, required this.postersList}) : super(key: key);
+  final List<String> postersList;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,8 +17,9 @@ class NumberTileCard extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: List.generate(
-                10,
+                postersList.length,
                 (index) => NumberCard(
+                      imageUrl: postersList[index],
                       index: index,
                     )),
           ),

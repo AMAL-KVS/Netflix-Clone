@@ -7,6 +7,7 @@ import 'package:netflix/presentation/downloads/widgets/main_page/widgets/bottom_
 import 'package:netflix/presentation/downloads/widgets/screen_downloads.dart';
 import 'package:netflix/presentation/home/screen_home.dart';
 import 'package:netflix/presentation/new%20and%20hot/screen_new_and_hot.dart';
+
 import 'package:netflix/presentation/search/screen_search.dart';
 
 class ScreenMainPage extends StatelessWidget {
@@ -29,7 +30,7 @@ class ScreenMainPage extends StatelessWidget {
               return _pages[index];
             })),
       ),
-      bottomNavigationBar: BottomNavigationWidgets(),
+      bottomNavigationBar: const BottomNavigationWidgets(),
     );
   }
 }

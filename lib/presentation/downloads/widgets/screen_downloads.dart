@@ -20,7 +20,7 @@ class ScreenDownload extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: const PreferredSize(
+        appBar: const PreferredSize(  
             preferredSize: Size.fromHeight(50),
             child: AppBarWidget(
               title: 'Downloads',
@@ -137,7 +137,7 @@ class Section2 extends StatelessWidget {
                         ),
                         DawnloadsImageWidget(
                           imagelist:
-                              '$imageAppendurl${state.downloads[1].posterPath}',
+                              '$imageAppendurl${state.downloads[4].posterPath}',
                           margin: const EdgeInsets.only(right: 130, bottom: 50),
                           angle: -20,
                           size: Size(size.width * 0.4, size.width * 0.58),

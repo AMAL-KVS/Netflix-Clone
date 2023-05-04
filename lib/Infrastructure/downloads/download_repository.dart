@@ -23,7 +23,7 @@ class DownloadsRepositery implements IDownloadsRep {
         print(downloadsList);
         return Right(downloadsList);
       } else {
-        return const Left(MainFailure.serverFailure());
+        return const Left(MainFailure.serverFailure());  
       }
     } catch (e) {
       log(e.toString());
